@@ -5,17 +5,17 @@ pipeline {
             steps {
                 script {
 
-                    withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                //     withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     
-                    sh "systemctl start docker"
-                    sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-                    sh "docker build -t python_app_final ."
-                    sh "docker tag python_app_final gcr.io/careful-trainer-377212/python_app_final"
-                    sh "docker push gcr.io/careful-trainer-377212/python_app_final"
-                    sh "docker pull redis"
-                    sh "docker tag redis gcr.io/careful-trainer-377212/redis_final"
-                    sh "docker push gcr.io/careful-trainer-377212/redis_final"}
-                }
+                //     sh "systemctl start docker"
+                //     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+                //     sh "docker build -t python_app_final ."
+                //     sh "docker tag python_app_final gcr.io/careful-trainer-377212/python_app_final"
+                //     sh "docker push gcr.io/careful-trainer-377212/python_app_final"
+                //     sh "docker pull redis"
+                //     sh "docker tag redis gcr.io/careful-trainer-377212/redis_final"
+                //     sh "docker push gcr.io/careful-trainer-377212/redis_final"}
+                // }
             }
         }
         stage('deploy') {
