@@ -15,7 +15,6 @@ spec:
       labels:
         app: frontend
     spec:
-      serviceAccountName: jenkins-admin
       containers:
         - name: python-app
           image: gcr.io/careful-trainer-377212/gcp-python-app
