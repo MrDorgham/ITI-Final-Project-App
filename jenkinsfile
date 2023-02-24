@@ -21,7 +21,7 @@ pipeline {
 
                   sh """
                   kubectl create namespace python-app1
-                  kubectl apply -f ./deployment_files -n python-app1
+                  kubectl apply -f ./deployment_files -n python-app3
 
                   """
 
