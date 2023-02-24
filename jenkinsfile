@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
 
-                    withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                    // withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     
                     sh "echo hi"
                     // sh "docker login -u ${USERNAME} -p ${PASSWORD}"
