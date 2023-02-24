@@ -15,6 +15,6 @@ ENV REDIS_HOST=localhost
 ENV REDIS_PORT=6379
 ENV REDIS_DB=0
 
-EXPOSE 8082
+EXPOSE 8081
 
 CMD ["python", "hello.py"]
