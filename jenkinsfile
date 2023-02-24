@@ -7,6 +7,7 @@ pipeline {
 
                     withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+                    sh "sudo apt install docker"
                     sh "sudo docker build -t python_app_final ."
                     sh "sudo docker tag python_app_final gcr.io/careful-trainer-377212/python_app_final"
                     sh "sudo docker push gcr.io/careful-trainer-377212/python_app_final"
