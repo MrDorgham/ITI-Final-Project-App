@@ -20,6 +20,3 @@ spec:
           image: gcr.io/careful-trainer-377212/gcp-python-app
           ports:
             - containerPort: 8080
-          env:
-            - name: REDIS_HOST
-              value: redis-service
